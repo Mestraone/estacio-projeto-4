@@ -1,0 +1,21 @@
+<main>
+    <div class="mx-5 px-5 mt-2">
+        <h2 style="font-weight: bold;">Dados do Livro</h2>
+        <form class="d-flex flex-column" (submit)="incluir()">
+            <label for="titulo">Título</label>
+            <input class="mb-1 rounded border border-dark" type="text" name="titulo" [(ngModel)]="livro.titulo">
+
+            <label for="resumo">Resumo</label>
+            <textarea style="height: 6rem;" class="mb-1 rounded border border-dark" name="resumo" [(ngModel)]="livro.resumo"></textarea>
+
+            <label for="editora">Editora</label>
+            <input class="mb-1 rounded border border-dark" type="text" name="editora" [(ngModel)]="livro.editora">
+
+            <label for="autor">Autor</label>
+            <input class="mb-1 rounded border border-dark" type="text" name="autor" [(ngModel)]="livro.autor">
+            
+            <button class="bg-primary text-white border border-0 rounded p-2 w-25 mt-3" 
+            type="submit">Salvar Dados</button>
+        </form>
+    </div>
+</main>

@@ -1,0 +1,26 @@
+<main id="conteudo">
+    <div class="py-2">
+        <h2>Catálogo de Livros</h2>
+    </div>
+    <div>
+        <table class="tabela-livro w-100">
+            <thead class="tabela-titulo bg-dark bg-gradient text-white">
+                <tr>
+                    <td class="ps-2">Título</td>
+                    <td>Resumo</td>
+                    <td>Editora</td>
+                    <td>Autor</td>
+                </tr>
+            </thead>
+            <tbody *ngFor="let livro of livros">
+                <tr class="linha-livro {{livro.classe}}">
+                    <td class="ps-3">{{livro.titulo}}<br /><button (click)="excluir(livro.codigo)"
+                        class="botao-excluir p-2 bg-danger text-white border border-0 rounded">Excluir</button></td>
+                        <td>{{livro.resumo}}</td>
+                        <td>{{livro.editora}}</td>
+                        <td>{{livro.autor}}</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</main>
